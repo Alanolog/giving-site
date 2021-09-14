@@ -3,7 +3,9 @@ import Header from "../molecules/Header";
 function Hero() {
   return (
     <>
-      <Header />
+      <div className="hero-box">
+        <Header />
+      </div>
     </>
   );
 }

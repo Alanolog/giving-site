@@ -1,0 +1,13 @@
+.menu {
+  display: flex;
+}
+.menu__item {
+  font-size: 1.125rem;
+  padding: 20px 10px;
+  text-decoration: none;
+  color: $color-font;
+  margin: 0 1.5rem;
+  &:hover {
+    border: 1px solid $color-font;
+  }
+}

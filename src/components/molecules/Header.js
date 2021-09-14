@@ -1,5 +1,10 @@
 import React from "react";
+import Menu from "./Menu";
 function Header() {
-  return <></>;
+  return (
+    <>
+      <Menu />
+    </>
+  );
 }
 export default Header;
