@@ -1,5 +1,6 @@
 import React from "react";
 import HeroButton from "../atoms/HeroButton";
+import DecorationLine from "../atoms/DecorationLine";
 import { BrowserRouter as Router } from "react-router-dom";
 function HeroMainContent() {
   return (
@@ -7,7 +8,7 @@ function HeroMainContent() {
       <h1>
         Zacznij pomagać! <br /> Oddaj niechciane rzeczy w zaufane ręce
       </h1>
-      <div className="hero-box-right-content-image" />
+      <DecorationLine />
       <div className="hero-box-right-btns">
         <Router>
           <HeroButton text="Oddaj Rzeczy" />
