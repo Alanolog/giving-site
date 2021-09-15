@@ -23,9 +23,12 @@
 .four-steps-content-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: 8vw;
   text-align: center;
+  img {
+    width: 83px;
+    margin: auto;
+  }
   h5 {
     font-size: 1.125rem;
     line-height: 1.375rem;
