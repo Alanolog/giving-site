@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function LoginButton() {
   return (
-    <a href="https://google.com" className="header__signinbox-button">
+    <Link to="/logowanie" className="header__signinbox-button">
       Zaloguj
-    </a>
+    </Link>
   );
 }
 export default LoginButton;

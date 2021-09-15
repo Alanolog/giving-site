@@ -1,9 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 function SignUpButton() {
   return (
-    <a href="https://google.com" className="header__signinbox-button">
+    <Link to="/rejestracja" className="header__signinbox-button">
       Załóż konto
-    </a>
+    </Link>
   );
 }
 export default SignUpButton;
