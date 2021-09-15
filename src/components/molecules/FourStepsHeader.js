@@ -1,5 +1,5 @@
 import React from "react";
-import DecorationLine from "./DecorationLine";
+import DecorationLine from "../atoms/DecorationLine";
 function FourStepsHeader() {
   return (
     <div className="four-steps-heading">
