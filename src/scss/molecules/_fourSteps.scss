@@ -11,3 +11,22 @@
     font-size: 2.125rem;
   }
 }
+.four-steps-content {
+  background-color: $color-background-secondary;
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.four-steps-content-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 8vw;
+  text-align: center;
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}

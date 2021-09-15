@@ -1,5 +1,5 @@
 import React from "react";
-import HeroButton from "../atoms/HeroButton";
+import Button from "../atoms/Button";
 import DecorationLine from "../atoms/DecorationLine";
 import { BrowserRouter as Router } from "react-router-dom";
 function HeroMainContent() {
@@ -11,8 +11,8 @@ function HeroMainContent() {
       <DecorationLine />
       <div className="hero-box-right-btns">
         <Router>
-          <HeroButton text="Oddaj Rzeczy" />
-          <HeroButton text="Zorganizuj Zbiórkę" />
+          <Button text="Oddaj Rzeczy" />
+          <Button text="Zorganizuj Zbiórkę" />
         </Router>
       </div>
     </div>
