@@ -11,8 +11,8 @@ function HeroMainContent() {
       <DecorationLine />
       <div className="hero-box-right-btns">
         <Router>
-          <Button text="Oddaj Rzeczy" />
-          <Button text="Zorganizuj Zbiórkę" />
+          <Button text="Oddaj Rzeczy" link="/logowanie" />
+          <Button text="Zorganizuj Zbiórkę" link="/logowanie" />
         </Router>
       </div>
     </div>
