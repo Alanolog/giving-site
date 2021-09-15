@@ -1,0 +1,31 @@
+.hero-box {
+  display: flex;
+}
+.hero {
+  background-image: url("../../assets/Home-Hero-Image.jpg");
+  width: 50%;
+  height: 900px;
+  background-position: right;
+}
+.hero-box-right-content {
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 680px;
+  h1 {
+    font-size: 2.125rem;
+    line-height: 3.4375rem;
+    text-align: center;
+  }
+  .hero-box-right-content-image {
+    background-image: url("../../assets/Decoration.svg");
+    width: 250px;
+    height: 33px;
+  }
+}
+.hero-box-right-btns {
+  display: flex;
+  gap: 45px;
+}
