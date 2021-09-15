@@ -4,11 +4,11 @@ function Menu() {
   return (
     <>
       <nav className="menu">
-        <MenuItem text={"Start"} />
-        <MenuItem text={"O co chodzi?"} />
-        <MenuItem text={"O nas"} />
-        <MenuItem text={"Fundacja i organizacje"} />
-        <MenuItem text={"Kontakt"} />
+        <MenuItem text={"Start"} location={""} />
+        <MenuItem text={"O co chodzi?"} location={""} />
+        <MenuItem text={"O nas"} location={""} />
+        <MenuItem text={"Fundacja i organizacje"} location={""} />
+        <MenuItem text={"Kontakt"} location={""} />
       </nav>
     </>
   );

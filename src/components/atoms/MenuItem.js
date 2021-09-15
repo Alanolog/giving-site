@@ -1,9 +1,10 @@
 import React from "react";
-function MenuItem({ text }) {
+import { Link } from "react-scroll";
+function MenuItem({ text, location }) {
   return (
-    <a href="https://google.com" className="menu__item">
+    <Link to={location} smooth={true} duration={300} className="menu__item">
       {text}
-    </a>
+    </Link>
   );
 }
 export default MenuItem;
