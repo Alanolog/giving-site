@@ -1,5 +1,10 @@
 import React from "react";
+import HelpInfoHeader from "../molecules/HelpInfoHeader";
 function HelpInfo() {
-  return <></>;
+  return (
+    <section className="help-info">
+      <HelpInfoHeader />
+    </section>
+  );
 }
 export default HelpInfo;
