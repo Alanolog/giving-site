@@ -5,7 +5,7 @@ import Button from "../atoms/Button";
 import { BrowserRouter as Router } from "react-router-dom";
 function FourSteps() {
   return (
-    <div className="four-steps" name="four-steps">
+    <section className="four-steps" name="four-steps">
       <FourStepsHeader />
       <FourStepsContent />
       <Router>
@@ -20,7 +20,7 @@ function FourSteps() {
           <Button text="Oddaj Rzeczy" link="/logowanie" />
         </div>
       </Router>
-    </div>
+    </section>
   );
 }
 export default FourSteps;

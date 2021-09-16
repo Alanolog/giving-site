@@ -3,13 +3,13 @@ import Header from "../molecules/Header";
 import HeroMainContent from "../molecules/HeroMainContent";
 function Hero() {
   return (
-    <div className="hero-box" name="hero">
+    <section className="hero-box" name="hero">
       <div className="hero" />
       <div className="hero-box-right">
         <Header />
         <HeroMainContent />
       </div>
-    </div>
+    </section>
   );
 }
 export default Hero;

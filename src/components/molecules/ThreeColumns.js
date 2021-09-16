@@ -2,7 +2,7 @@ import React from "react";
 import OneOfThreeColumn from "../atoms/OneOfThreeColumn";
 function ThreeColumns() {
   return (
-    <div className="columns-box">
+    <section className="columns-box">
       <OneOfThreeColumn
         text="Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat."
         title="Oddanych worków"
@@ -18,7 +18,7 @@ function ThreeColumns() {
         title="Zorganizowanych Zbiórek"
         header="7"
       />
-    </div>
+    </section>
   );
 }
 export default ThreeColumns;
