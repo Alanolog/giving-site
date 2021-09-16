@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 .help-info-header {
   display: flex;
@@ -13,5 +15,19 @@
   h1 {
     font-size: 2.375rem;
     line-height: 3.4375rem;
+  }
+}
+.help-info-buttons {
+  display: flex;
+  gap: 65px;
+}
+.help-info-button {
+  font-size: 1.5rem;
+  padding: 23px 42px;
+  max-width: 15vw;
+  border: 1px solid $color-background;
+  background-color: $color-background;
+  &:hover {
+    border: 1px solid $color-font;
   }
 }
