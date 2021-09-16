@@ -3,12 +3,21 @@ import HelpInfoButton from "../atoms/HelpInfoButton";
 function HelpInfoButtons({ changeFunc }) {
   return (
     <div className="help-info-buttons">
-      <HelpInfoButton changeFunc={changeFunc} text="Fundacjom" />
       <HelpInfoButton
         changeFunc={changeFunc}
+        value="Foundation"
+        text="Fundacjom"
+      />
+      <HelpInfoButton
+        changeFunc={changeFunc}
+        value="NGO"
         text="Organizacjom pozarządowym"
       />
-      <HelpInfoButton changeFunc={changeFunc} text="Lokalnym zbiórkom" />
+      <HelpInfoButton
+        changeFunc={changeFunc}
+        value="Fundraising"
+        text="Lokalnym zbiórkom"
+      />
     </div>
   );
 }

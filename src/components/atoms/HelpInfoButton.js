@@ -1,8 +1,14 @@
 import React from "react";
-function HelpInfoButton({ changeFunc, text }) {
+function HelpInfoButton({ changeFunc, text, value }) {
   return (
     <>
-      <button className="help-info-button" onClick={() => changeFunc()}>
+      <button
+        className="help-info-button"
+        onClick={(e) => {
+          e.preventDefault();
+          changeFunc(value);
+        }}
+      >
         {text}
       </button>
     </>
