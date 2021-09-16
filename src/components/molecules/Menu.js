@@ -4,8 +4,8 @@ function Menu() {
   return (
     <>
       <nav className="menu">
-        <MenuItem text={"Start"} location={""} />
-        <MenuItem text={"O co chodzi?"} location={""} />
+        <MenuItem text={"Start"} location={"hero"} />
+        <MenuItem text={"O co chodzi?"} location={"four-steps"} />
         <MenuItem text={"O nas"} location={""} />
         <MenuItem text={"Fundacja i organizacje"} location={""} />
         <MenuItem text={"Kontakt"} location={""} />
