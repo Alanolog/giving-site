@@ -1,18 +1,77 @@
+.form-background {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../../assets/Background-Contact-Form.jpg");
+  background-position: top;
+}
 .form-container {
-  background-image: url("../../assets/Background-Contact-Form.jpg");
+  opacity: 1.5;
   display: flex;
   flex-direction: column;
   width: 80%;
   margin: auto;
   align-items: flex-end;
+  padding-bottom: 300px;
 }
 .form-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 1;
+  margin-bottom: 30px;
   h1 {
     font-size: 2.125rem;
     line-height: 3.4375rem;
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  button {
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    color: #000000;
+    align-self: flex-end;
+    padding: 13px 52px;
+    margin-top: 45px;
+    background-color: $color-background;
+    border: 1px solid $color-font;
+  }
+}
+.form-box {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.form-item,
+.form-item-message {
+  font-size: 1rem;
+  color: $color-font;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  input {
+    border-style: none none solid none;
+    border-bottom: 1px solid #3c3c3c26;
+    ::placeholder {
+      color: #3c3c3c26;
+    }
+  }
+}
+.form-item-message {
+  textarea {
+    border-style: none none solid none;
+    border-bottom: 1px solid #3c3c3c26;
+    resize: none;
+    overflow: auto;
+    width: 100%;
+    ::placeholder {
+      color: #3c3c3c26;
+    }
   }
 }
