@@ -1,0 +1,18 @@
+.form-container {
+  background-image: url("../../assets/Background-Contact-Form.jpg");
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  align-items: flex-end;
+}
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  h1 {
+    font-size: 2.125rem;
+    line-height: 3.4375rem;
+  }
+}
