@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin: auto;
+  padding-bottom: 10px;
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: $color-font;
+    text-align: center;
+    flex-grow: 100;
+  }
+  .footer-img-box {
+    img {
+      width: 30px;
+      height: 30px;
+      flex-grow: 1;
+    }
+  }
+}
