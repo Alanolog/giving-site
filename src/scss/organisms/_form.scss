@@ -57,12 +57,19 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  position: relative;
   input {
     border-style: none none solid none;
     border-bottom: 1px solid #3c3c3c26;
     ::placeholder {
       color: #3c3c3c26;
     }
+  }
+  p {
+    position: absolute;
+    top: 50px;
+    color: red;
+    font-size: 0.625rem;
   }
 }
 .form-item-message {
@@ -76,4 +83,16 @@ form {
       color: #3c3c3c26;
     }
   }
+  p {
+    position: absolute;
+    top: 170px;
+    color: red;
+    font-size: 0.625rem;
+  }
+}
+#succesMessage {
+  color: green;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 60px;
 }
