@@ -11,7 +11,7 @@ function HelpInfoNGO() {
         veniam, quis nostrud exercitation.
       </h4>
       <div className="help-info-content-records">
-        {option == 1 ? (
+        {option === 1 ? (
           <>
             <HelpInfoRecord
               title={"Organizacja “Lorem Ipsum 1”"}
@@ -33,7 +33,7 @@ function HelpInfoNGO() {
               type={"Mi, quis, hendrerit, dolor"}
             />
           </>
-        ) : option == 2 ? (
+        ) : option === 2 ? (
           <>
             <HelpInfoRecord
               title={"Organizacja “Lorem Ipsum 4”"}

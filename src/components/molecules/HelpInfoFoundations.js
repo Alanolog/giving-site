@@ -11,7 +11,7 @@ function HelpInfoFoundations() {
         potrzebują.
       </h4>
       <div className="help-info-content-records">
-        {option == 1 ? (
+        {option === 1 ? (
           <>
             <HelpInfoRecord
               title={"Fundacja “Dbam o Zdrowie”"}
@@ -33,7 +33,7 @@ function HelpInfoFoundations() {
               type={"ubrania, jedzenie, ciepłe koce"}
             />
           </>
-        ) : option == 2 ? (
+        ) : option === 2 ? (
           <>
             <HelpInfoRecord
               title={"Fundacja “Dbam o Zdrowie”"}
@@ -55,7 +55,7 @@ function HelpInfoFoundations() {
               type={"ubrania, jedzenie, ciepłe koce"}
             />
           </>
-        ) : option == 3 ? (
+        ) : option === 3 ? (
           <>
             <HelpInfoRecord
               title={"Fundacja “Dbam o Zdrowie”"}
