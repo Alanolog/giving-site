@@ -1,9 +1,11 @@
 import React from "react";
 import Home from "./components/templates/Home";
+import Login from "./components/templates/Login";
 function App() {
   return (
     <>
-      <Home />
+      <Login />
+      {/* <Home /> */}
     </>
   );
 }
