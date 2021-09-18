@@ -14,7 +14,7 @@ function FormBody() {
   const [isPosted, setIsPosted] = useState("");
   useEffect(() => {
     setNameCorrectness(validateName(name));
-    setEmailCorrectness(validateEmail(name));
+    setEmailCorrectness(validateEmail(email));
     setMessageCorrectness(validateMessage(message));
   }, [name, email, message]);
   useEffect(() => {
