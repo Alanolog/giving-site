@@ -5,11 +5,11 @@ import validateEmail from "../atoms/validateEmail";
 import validateMessage from "../atoms/validateMessage";
 import validationFormVisualPart from "../atoms/validationFormVisualPart";
 function FormBody() {
-  const [name, setName] = useState(" ");
+  const [name, setName] = useState("");
   const [nameCorrectness, setNameCorrectness] = useState(false);
-  const [email, setEmail] = useState(" ");
+  const [email, setEmail] = useState("");
   const [emailCorrectness, setEmailCorrectness] = useState(false);
-  const [message, setMessage] = useState(" ");
+  const [message, setMessage] = useState("");
   const [messageCorrectness, setMessageCorrectness] = useState(false);
   const [isPosted, setIsPosted] = useState("");
   useEffect(() => {

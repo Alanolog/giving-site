@@ -8,14 +8,20 @@ function FormButton({ data, setIsPosted }) {
       },
       body: JSON.stringify(data),
     })
-      .then((r) => r.json())
+      .then((r) => {
+        console.log(r);
+        if (r.status === 400) {
+          setIsPosted(false);
+        } else if (r.status === 200) {
+          setIsPosted(true);
+        }
+        return r.json();
+      })
       .then((data) => {
         console.log(data);
-        setIsPosted(true);
       })
       .catch((error) => {
         console.log(error);
-        setIsPosted(false);
       });
   }
   return (
