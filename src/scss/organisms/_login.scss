@@ -30,3 +30,27 @@
     }
   }
 }
+.login-form {
+  width: 40%;
+  margin: auto;
+}
+.login-button {
+  border: 1px solid $color-background;
+  font-weight: 300;
+  padding: 13px 15px;
+  color: $color-font;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  text-decoration: none;
+  font-family: "Open Sans";
+  &:hover {
+    border: 1px solid $color-font;
+  }
+}
+.login-buttons-box {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
