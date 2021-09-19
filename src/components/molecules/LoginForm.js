@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
+import validateLogin from "../atoms/validateLogin";
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -9,7 +10,11 @@ function LoginForm() {
       <div className="login-content-form-box">
         <label htmlFor="email">
           Email
+          <p id="falseLoginEmail" className="hidden">
+            Podany email jest nieprawidłowy!
+          </p>
           <input
+            id="email"
             type="text"
             name="email"
             onChange={(e) => setEmail(e.target.value)}
@@ -17,7 +22,11 @@ function LoginForm() {
         </label>
         <label htmlFor="password">
           Hasło
+          <p id="falseLoginPassword" className="hidden">
+            Podane hasło jest za krótkie!
+          </p>
           <input
+            id="password"
             type="password"
             name="password"
             onChange={(e) => setPassword(e.target.value)}
@@ -30,7 +39,13 @@ function LoginForm() {
             Załóż konto
           </Link>
         </Router>
-        <button className="login-button" onClick={(e) => e.preventDefault()}>
+        <button
+          className="login-button"
+          onClick={(e) => {
+            e.preventDefault();
+            validateLogin(email, password);
+          }}
+        >
           Zaloguj się
         </button>
       </div>

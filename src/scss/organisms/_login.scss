@@ -19,8 +19,15 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    position: relative;
     &:not(:last-of-type) {
       padding-bottom: 20px;
+    }
+    p {
+      position: absolute;
+      top: 60px;
+      color: red;
+      font-size: 0.625rem;
     }
     input {
       border: 1px solid $color-font;
