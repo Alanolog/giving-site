@@ -1,0 +1,28 @@
+.logout-content {
+  padding-top: 100px;
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    line-height: 3.4375rem;
+    margin-bottom: 40px;
+  }
+}
+.logout-button {
+  margin-top: 40px;
+  border: 1px solid $color-background;
+  font-weight: 300;
+  padding: 13px 15px;
+  color: $color-font;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  text-decoration: none;
+  font-family: "Open Sans";
+  &:hover {
+    border: 1px solid $color-font;
+  }
+}
