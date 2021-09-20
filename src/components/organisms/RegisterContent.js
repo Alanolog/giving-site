@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DecorationLine from "../atoms/DecorationLine";
 import RegisterForm from "../molecules/RegisterForm";
 function RegisterContent() {

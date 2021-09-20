@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import validateSignUp from "../atoms/validateSignUp";
 function RegisterForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,7 +23,7 @@ function RegisterForm() {
         <label htmlFor="password">
           Hasło
           <p id="falseRegisterPassword" className="hidden">
-            Podane hasło jest za krótkie lub hasła nie są takie same!
+            Podane hasło jest za krótkie!
           </p>
           <input
             id="password"
@@ -31,13 +32,13 @@ function RegisterForm() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </label>
-        <label htmlFor="password">
+        <label htmlFor="password2">
           Powtórz Hasło
           <p id="falseRegisterPassword2" className="hidden">
-            Podane hasło jest za krótkie lub hasła nie są takie same!
+            Hasła nie są takie same!
           </p>
           <input
-            id="password"
+            id="password2"
             type="password"
             name="password"
             onChange={(e) => setPassword2(e.target.value)}
@@ -52,6 +53,7 @@ function RegisterForm() {
           className="register-button"
           onClick={(e) => {
             e.preventDefault();
+            validateSignUp(email, password, password2);
           }}
         >
           Załóż Konto
