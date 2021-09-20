@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
 import validateLogin from "../atoms/validateLogin";
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -34,11 +33,9 @@ function LoginForm() {
         </label>
       </div>
       <div className="login-buttons-box">
-        <Router className="register-router">
-          <Link className="login-button" to="/rejestracja">
-            Załóż konto
-          </Link>
-        </Router>
+        <Link className="login-button" to="/rejestracja">
+          Załóż konto
+        </Link>
         <button
           className="login-button"
           onClick={(e) => {
