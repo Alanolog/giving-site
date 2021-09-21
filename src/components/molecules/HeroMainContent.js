@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../atoms/Button";
 import DecorationLine from "../atoms/DecorationLine";
-function HeroMainContent() {
+function HeroMainContent({ user }) {
   return (
     <div className="hero-box-right-content">
       <h1>
@@ -9,8 +9,17 @@ function HeroMainContent() {
       </h1>
       <DecorationLine />
       <div className="hero-box-right-btns">
-        <Button text="Oddaj Rzeczy" link="/logowanie" />
-        <Button text="Zorganizuj Zbiórkę" link="/logowanie" />
+        {user ? (
+          <>
+            <Button text="Oddaj Rzeczy" link="/oddaj-rzeczy" />
+            <Button text="Zorganizuj Zbiórkę" link="/oddaj-rzeczy" />
+          </>
+        ) : (
+          <>
+            <Button text="Oddaj Rzeczy" link="/logowanie" />
+            <Button text="Zorganizuj Zbiórkę" link="/logowanie" />
+          </>
+        )}
       </div>
     </div>
   );

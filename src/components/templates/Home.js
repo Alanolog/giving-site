@@ -5,10 +5,10 @@ import ReturnItems from "../molecules/ReturnItems";
 import AboutUs from "../organisms/AboutUs";
 import HelpInfo from "../organisms/HelpInfo";
 import FormBox from "../organisms/FormBox";
-function Home() {
+function Home({ user }) {
   return (
     <>
-      <Hero />
+      <Hero user={user} />
       <InfoCards />
       <ReturnItems />
       <AboutUs />

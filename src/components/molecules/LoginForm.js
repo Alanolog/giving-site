@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import validateLogin from "../atoms/validateLogin";
 import login from "../atoms/login";
 function LoginForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isLogged, setIsLogged] = useState(false);
-  useEffect(() => {
-    if (isLogged) {
-    }
-  }, [isLogged]);
+  // const [isLogged, setIsLogged] = useState(false);
+  // useEffect(() => {
+  //   if (isLogged) {
+  //     <Redirect to="/" />;
+  //   }
+  // }, [isLogged]);
   return (
     <form className="login-form">
       <div className="login-content-form-box">
@@ -47,7 +48,7 @@ function LoginForm({ setUser }) {
           onClick={(e) => {
             e.preventDefault();
             if (validateLogin(email, password)) {
-              login(email, password, setUser, setIsLogged);
+              login(email, password, setUser);
             }
           }}
         >

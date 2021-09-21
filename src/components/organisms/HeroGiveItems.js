@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../molecules/Header";
 import HeroMainContent from "../molecules/HeroMainContent";
-function Hero({ user }) {
+function HeroGiveItems({ user }) {
   return (
     <section className="hero-box" name="hero">
       <div className="hero" />
@@ -12,4 +12,4 @@ function Hero({ user }) {
     </section>
   );
 }
-export default Hero;
+export default HeroGiveItems;

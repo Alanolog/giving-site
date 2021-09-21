@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Menu from "./Menu";
 import LoginButton from "../atoms/LoginButton";
 import SignUpButton from "../atoms/SignUpButton";
-function Header() {
+import LogoutButton from "../atoms/LogoutButton";
+import GiveItemsButton from "../atoms/GiveItemsButton";
+function Header({ user }) {
+  useEffect(() => {}, [user]);
   return (
     <>
       <header className="header__box">
         <div className="header__signinbox">
-          <LoginButton />
-          <SignUpButton />
+          {user ? (
+            <>
+              <p>Cześć {user.email}</p>
+              <GiveItemsButton />
+              <LogoutButton />
+            </>
+          ) : (
+            <>
+              <LoginButton />
+              <SignUpButton />
+            </>
+          )}
         </div>
         <Menu />
       </header>
