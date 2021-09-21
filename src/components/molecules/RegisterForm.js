@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import validateSignUp from "../atoms/validateSignUp";
-function RegisterForm() {
+import signUp from "../atoms/signUp";
+function RegisterForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
@@ -54,6 +55,7 @@ function RegisterForm() {
           onClick={(e) => {
             e.preventDefault();
             validateSignUp(email, password, password2);
+            signUp(email, password, setUser);
           }}
         >
           Załóż Konto

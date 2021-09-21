@@ -1,13 +1,13 @@
-import firebase from "firebase";
-const config = {
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
   apiKey: "AIzaSyDSAwhNNnJB8mx04z5xw51H7b6ZRPk41Uk",
   authDomain: "giving-site-a593d.firebaseapp.com",
   projectId: "giving-site-a593d",
   storageBucket: "giving-site-a593d.appspot.com",
   messagingSenderId: "491381958578",
-  appId: "1:491381958578:web:d4c1461b735d5dbef926ab",
-  measurementId: "G-50ND9BCTF7",
+  appId: "1:491381958578:web:f5ed964a22eb3dc8f926ab",
+  measurementId: "G-D2JBYLQX3D",
 };
-firebase.initializeApp(config);
 
-export default firebase;
+const app = initializeApp(firebaseConfig);
