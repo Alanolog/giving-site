@@ -1,8 +1,10 @@
 import validateEmail from "./validateEmail";
 function validateSignUp(email, password, password2) {
+  let isCorrect = true;
   if (!validateEmail(email)) {
     document.getElementById("falseRegisterEmail").classList.remove("hidden");
     document.getElementById("email").style.borderBottom = "1px solid red";
+    isCorrect = false;
   } else {
     document.getElementById("falseRegisterEmail").classList.add("hidden");
     document.getElementById("email").style.borderBottom = "1px solid#3c3c3c";
@@ -11,6 +13,7 @@ function validateSignUp(email, password, password2) {
   if (password.length <= 6) {
     document.getElementById("falseRegisterPassword").classList.remove("hidden");
     document.getElementById("password").style.borderBottom = "1px solid red";
+    isCorrect = false;
   } else {
     document.getElementById("falseRegisterPassword").classList.add("hidden");
     document.getElementById("password").style.borderBottom =
@@ -22,10 +25,12 @@ function validateSignUp(email, password, password2) {
       .getElementById("falseRegisterPassword2")
       .classList.remove("hidden");
     document.getElementById("password2").style.borderBottom = "1px solid red";
+    isCorrect = false;
   } else {
     document.getElementById("falseRegisterPassword2").classList.add("hidden");
     document.getElementById("password2").style.borderBottom =
       "1px solid #3c3c3c";
   }
+  return isCorrect;
 }
 export default validateSignUp;

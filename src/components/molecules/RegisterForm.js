@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import validateSignUp from "../atoms/validateSignUp";
 import signUp from "../atoms/signUp";
@@ -6,6 +6,11 @@ function RegisterForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
+  const [isRegistered, setIsRegistered] = useState(false);
+  useEffect(() => {
+    if (isRegistered) {
+    }
+  }, [isRegistered]);
   return (
     <form className="register-form">
       <div className="register-content-form-box">
@@ -54,8 +59,9 @@ function RegisterForm({ setUser }) {
           className="register-button"
           onClick={(e) => {
             e.preventDefault();
-            validateSignUp(email, password, password2);
-            signUp(email, password, setUser);
+            if (validateSignUp(email, password, password2)) {
+              signUp(email, password, setUser, setIsRegistered);
+            }
           }}
         >
           Załóż Konto

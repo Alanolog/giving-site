@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "../molecules/Header";
 import LoginContent from "../organisms/LoginContent";
-function Login() {
+function Login({ setUser }) {
   return (
     <>
       <Header />
-      <LoginContent />
+      <LoginContent setUser={setUser} />
     </>
   );
 }

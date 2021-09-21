@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import validateLogin from "../atoms/validateLogin";
-function LoginForm() {
+import login from "../atoms/login";
+function LoginForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLogged, setIsLogged] = useState(false);
+  useEffect(() => {
+    if (isLogged) {
+    }
+  }, [isLogged]);
   return (
     <form className="login-form">
       <div className="login-content-form-box">
@@ -40,7 +46,9 @@ function LoginForm() {
           className="login-button"
           onClick={(e) => {
             e.preventDefault();
-            validateLogin(email, password);
+            if (validateLogin(email, password)) {
+              login(email, password, setUser, setIsLogged);
+            }
           }}
         >
           Zaloguj się
