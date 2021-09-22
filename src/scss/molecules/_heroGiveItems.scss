@@ -1,0 +1,47 @@
+.heroGiveItems {
+  background-image: url("../../assets/Form-Hero-Image.jpg");
+  width: 50%;
+  height: 850px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.heroGiveItems-box-right-content {
+  h2 {
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    font-weight: 300;
+  }
+}
+.heroGiveItems-diamond-box {
+  display: flex;
+  .heroGiveItems-diamond {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid $color-font;
+    transform: rotate(45deg);
+    padding: 40px;
+    position: relative;
+
+    h5 {
+      position: absolute;
+      top: 10px;
+      left: 16px;
+      font-size: 2rem;
+      font-weight: 300;
+      text-align: center;
+      transform: rotate(-45deg);
+    }
+    p {
+      font-size: 1.375rem;
+      line-height: 1.6875rem;
+      font-weight: 300;
+      transform: rotate(-45deg);
+    }
+  }
+}
