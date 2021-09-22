@@ -10,11 +10,19 @@ function GiveItemsForm({ user }) {
 
   return (
     <>
-      <GiveItemsWarning
-        text={
-          "Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać."
-        }
-      />
+      {currStep === 1 ? (
+        <GiveItemsWarning
+          text={
+            "Uzupełnij szczegóły dotyczące Twoich rzeczy. Dzięki temu będziemy wiedzieć komu najlepiej je przekazać."
+          }
+        />
+      ) : currStep === 2 ? (
+        <GiveItemsWarning
+          text={
+            "Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcje jak poprawnie spakować rzeczy znajdziesz TUTAJ."
+          }
+        />
+      ) : null}
       <form className="giveItems-form">
         {currStep === 1 ? (
           <>

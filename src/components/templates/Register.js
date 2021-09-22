@@ -4,7 +4,7 @@ import RegisterContent from "../organisms/RegisterContent";
 function Register({ setUser }) {
   return (
     <>
-      <Header />
+      <Header setUser={setUser} />
       <RegisterContent setUser={setUser} />
     </>
   );

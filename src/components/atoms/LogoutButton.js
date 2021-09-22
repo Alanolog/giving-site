@@ -12,6 +12,7 @@ function LogoutButton({ setUser }) {
         signOut(auth)
           .then(() => {
             setUser(false);
+            console.log("wylogowano");
           })
           .catch((error) => {
             console.log(error);
