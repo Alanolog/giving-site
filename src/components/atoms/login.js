@@ -2,7 +2,7 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import validateEmail from "./validateEmail";
 import { Redirect } from "react-router";
 
-function login(email, password, setUser) {
+function login(email, password, setUser, setIsLogged) {
   if (!validateEmail(email) || password > 6) {
     return;
   }
@@ -12,20 +12,21 @@ function login(email, password, setUser) {
     .then((userCredential) => {
       const user = userCredential.user;
       setUser(user);
-      // setIsLogged(true);
+      setIsLogged(true);
       console.log(user);
+      console.log(<Redirect to="/" />);
       return <Redirect to="/" />;
     })
     .catch((error) => {
       if (error.code === "auth/user-not-found") {
-        // setIsLogged(false);
+        setIsLogged(false);
         alert("Nie znaleziono użytkownika z takim emailem!");
       } else if (error.code === "auth/wrong-password") {
-        // setIsLogged(false);
+        setIsLogged(false);
         alert("Podałeś złe hasło!");
       } else {
         console.log(error);
-        // setIsLogged(false);
+        setIsLogged(false);
         alert(error.code, error.message);
       }
     });

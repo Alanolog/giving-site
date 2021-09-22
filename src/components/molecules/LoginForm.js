@@ -5,12 +5,10 @@ import login from "../atoms/login";
 function LoginForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [isLogged, setIsLogged] = useState(false);
-  // useEffect(() => {
-  //   if (isLogged) {
-  //     <Redirect to="/" />;
-  //   }
-  // }, [isLogged]);
+  const [isLogged, setIsLogged] = useState(false);
+  if (isLogged) {
+    return <Redirect to="/" />;
+  }
   return (
     <form className="login-form">
       <div className="login-content-form-box">
@@ -48,7 +46,7 @@ function LoginForm({ setUser }) {
           onClick={(e) => {
             e.preventDefault();
             if (validateLogin(email, password)) {
-              login(email, password, setUser);
+              login(email, password, setUser, setIsLogged);
             }
           }}
         >
