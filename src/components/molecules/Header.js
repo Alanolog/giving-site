@@ -12,7 +12,7 @@ function Header({ user }) {
         <div className="header__signinbox">
           {user ? (
             <>
-              <p>Cześć {user.email}</p>
+              <p>Cześć {user.email}!</p>
               <GiveItemsButton />
               <LogoutButton />
             </>
