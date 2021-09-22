@@ -2,7 +2,7 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import validateEmail from "./validateEmail";
 import { Redirect } from "react-router";
 
-function signUp(email, password, setUser) {
+function signUp(email, password, setUser, setIsRegistered) {
   if (!validateEmail(email) || password > 6) {
     return;
   }
@@ -12,16 +12,16 @@ function signUp(email, password, setUser) {
       const user = userCredential.user;
       console.log(user);
       setUser(user);
-      // setIsRegistered(true);
+      setIsRegistered(true);
       return <Redirect to="/" />;
     })
     .catch((error) => {
       if (error.code === "auth/email-already-in-use") {
         alert("Podany email jest już używany przez kogoś innego!");
-        // setIsRegistered(false);
+        setIsRegistered(false);
       } else {
         console.log(error);
-        // setIsRegistered(false);
+        setIsRegistered(false);
         alert(error.code, error.message);
       }
     });

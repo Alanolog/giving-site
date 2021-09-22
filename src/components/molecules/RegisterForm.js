@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
 import validateSignUp from "../atoms/validateSignUp";
 import signUp from "../atoms/signUp";
@@ -6,12 +6,11 @@ function RegisterForm({ setUser }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password2, setPassword2] = useState("");
-  // const [isRegistered, setIsRegistered] = useState(false);
-  // useEffect(() => {
-  //   if (isRegistered) {
-  //     <Redirect to="/" />;
-  //   }
-  // }, [isRegistered]);
+  const [isRegistered, setIsRegistered] = useState(false);
+  if (isRegistered) {
+    return <Redirect to="/" />;
+  }
+
   return (
     <form className="register-form">
       <div className="register-content-form-box">
@@ -61,7 +60,7 @@ function RegisterForm({ setUser }) {
           onClick={(e) => {
             e.preventDefault();
             if (validateSignUp(email, password, password2)) {
-              signUp(email, password, setUser);
+              signUp(email, password, setUser, setIsRegistered);
             }
           }}
         >
