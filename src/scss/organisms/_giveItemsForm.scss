@@ -1,11 +1,14 @@
 form.giveItems-form {
   background-image: url("../../assets/Background-Form.jpg");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: top;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  padding-left: 140px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .giveItems-form-step {
   font-size: 1.5rem;
