@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import GiveItemsWarning from "../molecules/GiveItemsWarning";
 import GiveItemsFormStep1 from "../molecules/GiveItemsFormStep1";
 import GiveItemsFormButton from "../atoms/GiveItemsFormButton";
+import GiveItemsFormStep2 from "../molecules/GiveItemsFormStep2";
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
   const [itemType, setItemType] = useState("");
+  const [bags, setBags] = useState("");
 
   return (
     <>
@@ -16,12 +18,30 @@ function GiveItemsForm({ user }) {
       <form className="giveItems-form">
         {currStep === 1 ? (
           <>
-            <GiveItemsFormStep1 setItemType={setItemType} />
-            <GiveItemsFormButton
-              currStep={currStep}
-              setCurrStep={setCurrStep}
-              direction="forward"
-            />
+            <GiveItemsFormStep1 setItemType={setItemType} itemType={itemType} />
+            <div>
+              <GiveItemsFormButton
+                currStep={currStep}
+                setCurrStep={setCurrStep}
+                direction="forward"
+              />
+            </div>
+          </>
+        ) : currStep === 2 ? (
+          <>
+            <GiveItemsFormStep2 setBags={setBags} bags={bags} />
+            <div style={{ display: "flex", gap: 50 }}>
+              <GiveItemsFormButton
+                currStep={currStep}
+                setCurrStep={setCurrStep}
+                direction="backward"
+              />
+              <GiveItemsFormButton
+                currStep={currStep}
+                setCurrStep={setCurrStep}
+                direction="forward"
+              />
+            </div>
           </>
         ) : null}
       </form>
