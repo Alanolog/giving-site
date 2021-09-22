@@ -3,7 +3,7 @@ import FormHeader from "./FormHeader";
 import FormBody from "./FormBody";
 function Form() {
   return (
-    <form>
+    <form className="form">
       <FormHeader />
       <FormBody />
     </form>
