@@ -9,8 +9,57 @@ form.giveItems-form {
   padding-left: 140px;
   padding-top: 50px;
   padding-bottom: 50px;
+  gap: 40px;
+  button {
+    margin-top: 100px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+    border: 1px solid $color-font;
+    padding: 23px 63px;
+    background-color: #0000;
+  }
+  label {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 300;
+    color: $color-black;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
+    input[type="radio"] {
+      position: relative;
+      margin-right: 30px;
+      cursor: pointer;
+      appearance: none;
+    }
+    input[type="radio"]:checked::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $color-font;
+      background-color: $color-primary;
+    }
+    input[type="radio"]::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $color-font;
+    }
+  }
 }
 .giveItems-form-step {
   font-size: 1.5rem;
   font-weight: 300;
+}
+.giveItems-form-stepTitle {
+  font-size: 2rem;
+  line-height: 2.875rem;
+  font-weight: 600;
+  color: $color-black;
+  margin-top: 70px;
 }

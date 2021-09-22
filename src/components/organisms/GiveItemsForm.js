@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import GiveItemsWarning from "../molecules/GiveItemsWarning";
+import GiveItemsFormStep1 from "../molecules/GiveItemsFormStep1";
+import GiveItemsFormButton from "../atoms/GiveItemsFormButton";
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
+  const [itemType, setItemType] = useState("");
 
   return (
     <>
@@ -13,7 +16,12 @@ function GiveItemsForm({ user }) {
       <form className="giveItems-form">
         {currStep === 1 ? (
           <>
-            <h5 className="giveItems-form-step">Krok 1/4</h5>
+            <GiveItemsFormStep1 setItemType={setItemType} />
+            <GiveItemsFormButton
+              currStep={currStep}
+              setCurrStep={setCurrStep}
+              direction="forward"
+            />
           </>
         ) : null}
       </form>
