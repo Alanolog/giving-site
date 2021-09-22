@@ -4,7 +4,7 @@ import LoginContent from "../organisms/LoginContent";
 function Login({ setUser }) {
   return (
     <>
-      <Header />
+      <Header setUser={setUser} />
       <LoginContent setUser={setUser} />
     </>
   );

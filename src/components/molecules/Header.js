@@ -4,7 +4,7 @@ import LoginButton from "../atoms/LoginButton";
 import SignUpButton from "../atoms/SignUpButton";
 import LogoutButton from "../atoms/LogoutButton";
 import GiveItemsButton from "../atoms/GiveItemsButton";
-function Header({ user }) {
+function Header({ user, setUser }) {
   useEffect(() => {}, [user]);
   return (
     <>
@@ -14,7 +14,7 @@ function Header({ user }) {
             <>
               <p>Cześć {user.email}!</p>
               <GiveItemsButton />
-              <LogoutButton />
+              <LogoutButton setUser={setUser} />
             </>
           ) : (
             <>

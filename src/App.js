@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Home user={user} />
+          <Home user={user} setUser={setUser} />
         </Route>
         <Route exact path="/logowanie">
           <Login setUser={setUser} />
@@ -21,9 +21,11 @@ function App() {
           <Register setUser={setUser} />
         </Route>
         <Route exact path="/oddaj-rzeczy">
-          <GiveItems user={user} />
+          <GiveItems user={user} setUser={setUser} />
         </Route>
-        <Route exact path="/wylogowano" component={Logout} />
+        <Route exact path="/wylogowano">
+          <Logout setUser={setUser} />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

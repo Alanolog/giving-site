@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 
-function LogoutButton() {
+function LogoutButton({ setUser }) {
   return (
     <Link
       to="/wylogowano"
@@ -10,8 +10,8 @@ function LogoutButton() {
       onClick={() => {
         const auth = getAuth();
         signOut(auth)
-          .then((r) => {
-            console.log(r);
+          .then(() => {
+            setUser(false);
           })
           .catch((error) => {
             console.log(error);
