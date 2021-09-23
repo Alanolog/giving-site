@@ -7,8 +7,10 @@ import GiveItemsFormStep3 from "../molecules/GiveItemsFormStep3";
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
   const [itemType, setItemType] = useState("");
-  const [bags, setBags] = useState("── wybierz ──");
-  const [localization, setLocalization] = useState("── wybierz ──");
+  const [bags, setBags] = useState("");
+  const [localization, setLocalization] = useState("");
+  const [helpGroups, setHelpGroups] = useState([]);
+  const [localizationSpecific, setLocalizationSpecific] = useState("");
 
   return (
     <>
@@ -29,7 +31,14 @@ function GiveItemsForm({ user }) {
         {currStep === 1 ? (
           <>
             <GiveItemsFormStep1 setItemType={setItemType} itemType={itemType} />
-            <div>
+            <div
+              style={{
+                display: "flex",
+                gap: 50,
+                position: "absolute",
+                bottom: 50,
+              }}
+            >
               <GiveItemsFormButton
                 currStep={currStep}
                 setCurrStep={setCurrStep}
@@ -40,7 +49,14 @@ function GiveItemsForm({ user }) {
         ) : currStep === 2 ? (
           <>
             <GiveItemsFormStep2 setBags={setBags} bags={bags} />
-            <div style={{ display: "flex", gap: 50 }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 50,
+                position: "absolute",
+                bottom: 50,
+              }}
+            >
               <GiveItemsFormButton
                 currStep={currStep}
                 setCurrStep={setCurrStep}
@@ -58,8 +74,19 @@ function GiveItemsForm({ user }) {
             <GiveItemsFormStep3
               localization={localization}
               setLocalization={setLocalization}
+              helpGroups={helpGroups}
+              setHelpGroups={setHelpGroups}
+              localizationSpecific={localizationSpecific}
+              setLocalizationSpecific={setLocalizationSpecific}
             />
-            <div style={{ display: "flex", gap: 50 }}>
+            <div
+              style={{
+                display: "flex",
+                gap: 50,
+                position: "absolute",
+                bottom: 50,
+              }}
+            >
               <GiveItemsFormButton
                 currStep={currStep}
                 setCurrStep={setCurrStep}
