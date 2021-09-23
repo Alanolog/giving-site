@@ -27,6 +27,12 @@ function GiveItemsForm({ user }) {
             "Wszystkie rzeczy do oddania zapakuj w 60l worki. Dokładną instrukcje jak poprawnie spakować rzeczy znajdziesz TUTAJ."
           }
         />
+      ) : currStep === 3 ? (
+        <GiveItemsWarning
+          text={
+            "Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy."
+          }
+        />
       ) : null}
       <form className="giveItems-form">
         {currStep === 1 ? (
