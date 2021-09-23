@@ -144,9 +144,11 @@ label.giveItems-form-label-step3-organisation {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
+  cursor: auto;
   input {
     width: 100%;
     background-color: transparent;
     border: 1px solid $color-font;
+    cursor: pointer;
   }
 }
