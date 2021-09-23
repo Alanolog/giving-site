@@ -4,6 +4,7 @@ import GiveItemsFormStep1 from "../molecules/GiveItemsFormStep1";
 import GiveItemsFormButton from "../atoms/GiveItemsFormButton";
 import GiveItemsFormStep2 from "../molecules/GiveItemsFormStep2";
 import GiveItemsFormStep3 from "../molecules/GiveItemsFormStep3";
+import GiveItemsFormStep4 from "../molecules/GiveItemsFormStep4";
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
   const [itemType, setItemType] = useState("");
@@ -79,6 +80,29 @@ function GiveItemsForm({ user }) {
               localizationSpecific={localizationSpecific}
               setLocalizationSpecific={setLocalizationSpecific}
             />
+            <div
+              style={{
+                display: "flex",
+                gap: 50,
+                position: "absolute",
+                bottom: 50,
+              }}
+            >
+              <GiveItemsFormButton
+                currStep={currStep}
+                setCurrStep={setCurrStep}
+                direction="backward"
+              />
+              <GiveItemsFormButton
+                currStep={currStep}
+                setCurrStep={setCurrStep}
+                direction="forward"
+              />
+            </div>
+          </>
+        ) : currStep === 4 ? (
+          <>
+            <GiveItemsFormStep4 />
             <div
               style={{
                 display: "flex",
