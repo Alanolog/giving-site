@@ -33,6 +33,8 @@ function GiveItemsForm({ user }) {
             "Jeśli wiesz komu chcesz pomóc, możesz wpisać nazwę tej organizacji w wyszukiwarce. Możesz też filtrować organizacje po ich lokalizacji bądź celu ich pomocy."
           }
         />
+      ) : currStep === 4 ? (
+        <GiveItemsWarning text={"Podaj adres oraz termin odbioru rzeczy."} />
       ) : null}
       <form className="giveItems-form">
         {currStep === 1 ? (
