@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import GiveItemsWarning from "../molecules/GiveItemsWarning";
 import GiveItemsFormStep1 from "../molecules/GiveItemsFormStep1";
 import GiveItemsFormButton from "../atoms/GiveItemsFormButton";

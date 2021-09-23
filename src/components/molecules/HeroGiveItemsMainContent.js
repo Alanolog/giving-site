@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import DecorationLine from "../atoms/DecorationLine";
 import HeroGiveItemsDiamond from "../atoms/HeroGiveItemsDiamond";
 function HeroGiveItemsMainContent() {
