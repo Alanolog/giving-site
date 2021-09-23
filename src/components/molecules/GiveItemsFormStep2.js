@@ -1,5 +1,6 @@
 import React from "react";
 function GiveItemsFormStep2({ setBags, bags }) {
+  const options = [1, 2, 3, 4, 5];
   return (
     <>
       <h5 className="giveItems-form-step">Krok 2/4</h5>
@@ -9,18 +10,22 @@ function GiveItemsFormStep2({ setBags, bags }) {
       <label className="giveItems-form-label-step2">
         liczba 60l worków:
         <select
+          className="select"
           name="bags"
           value={bags}
           onChange={(e) => setBags(e.target.value)}
         >
-          <option value="" disabled selected hidden>
+          <option value="" className="select-option" disabled selected hidden>
             ── wybierz ──
           </option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
+
+          {options.map((value, index) => {
+            return (
+              <option className="select-option" value={value} key={index}>
+                {value}
+              </option>
+            );
+          })}
         </select>
       </label>
     </>

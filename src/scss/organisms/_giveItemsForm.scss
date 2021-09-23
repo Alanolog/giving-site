@@ -56,7 +56,35 @@
       height: 40px;
       border: 1px solid $color-font;
     }
-    select {
+    .select {
+      border: 1px solid $color-font;
+      background-color: transparent;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 300;
+      background-image: url("../../assets/Icon-Arrow-Down.svg");
+      background-repeat: no-repeat;
+      background-position: right;
+      height: 50px;
+      width: 300px;
+      padding-left: 20px;
+      text-align: right;
+      appearance: none;
+      cursor: pointer;
+      padding-right: 260px;
+      .select-option:not(:checked) {
+        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
+        text-align: right;
+      }
+
+      .select-option:checked,
+      .select-option:active {
+        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
+        text-align: right;
+        display: none;
+      }
+    }
+    .select-localization {
       border: 1px solid $color-font;
       background-color: transparent;
       font-size: 1.5rem;
@@ -70,11 +98,15 @@
       padding-left: 20px;
       appearance: none;
       cursor: pointer;
-      option {
-        background-color: transparent;
-        margin-right: 5px;
-        border: 1px solid $color-font;
-        width: 30%;
+      margin-bottom: 20px;
+      .select-localization-option:not(:checked) {
+        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
+      }
+
+      .select-localization-option:checked,
+      .select-localization-option:active {
+        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
+        display: none;
       }
     }
   }
