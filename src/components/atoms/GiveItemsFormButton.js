@@ -14,12 +14,8 @@ function GiveItemsFormButton({
           setCurrStep(--currStep);
           return;
         }
-        if (direction === "accept") {
-          setCurrStep(++currStep);
-          return;
-        }
         if (validationFunc(validationArgument)) {
-          if (direction === "forward") {
+          if (direction === "forward" || direction === "accept") {
             setCurrStep(++currStep);
           }
         }

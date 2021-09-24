@@ -11,6 +11,7 @@ import validateItemType from "../atoms/validateGiveItemsForm/validateItemType";
 import validateBags from "../atoms/validateGiveItemsForm/validateBags";
 import validateStep3 from "../atoms/validateGiveItemsForm/validateStep3";
 import validateStep4 from "../atoms/validateGiveItemsForm/validateStep4";
+import storeGiveItemsFormData from "../atoms/storeGiveItemsFormData";
 
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
@@ -36,6 +37,7 @@ function GiveItemsForm({ user }) {
     helpGroups: helpGroups,
     localizationSpecific: localizationSpecific,
     deliveryInfo: deliveryInfo,
+    ownerUID: user.uid,
   };
 
   return (
@@ -198,6 +200,8 @@ function GiveItemsForm({ user }) {
                 currStep={currStep}
                 setCurrStep={setCurrStep}
                 direction="accept"
+                validationFunc={storeGiveItemsFormData}
+                validationArgument={userData}
               />
             </div>
           </>
