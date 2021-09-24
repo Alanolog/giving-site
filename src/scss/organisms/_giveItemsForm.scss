@@ -175,10 +175,16 @@ label.giveItems-form-label-step3-organisation {
       font-weight: 300;
 
       input[type="text"],
-      input[type="number"] {
+      input[type="number"],
+      input[type="date"],
+      input[type="time"],
+      textarea {
         width: 250px;
         background-color: transparent;
         border: 1px solid $color-font;
+      }
+      textarea {
+        resize: none;
       }
       input[type="number"] {
         &::-webkit-inner-spin-button,

@@ -52,6 +52,38 @@ function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
         </div>
         <div className="giveItems-form-step-content-right">
           <h2>Termin odbioru:</h2>
+          <label>
+            Data
+            <input
+              type="date"
+              value={deliveryInfo.date}
+              onChange={(e) => {
+                setDeliveryInfo({ ...deliveryInfo, date: e.target.value });
+              }}
+            />
+          </label>
+          <label>
+            Godzina
+            <input
+              type="time"
+              value={deliveryInfo.time}
+              timezone=""
+              onChange={(e) => {
+                setDeliveryInfo({ ...deliveryInfo, time: e.target.value });
+              }}
+            />
+          </label>
+          <label>
+            Uwagi <br />
+            dla kuriera
+            <textarea
+              rows="4"
+              value={deliveryInfo.note}
+              onChange={(e) => {
+                setDeliveryInfo({ ...deliveryInfo, note: e.target.value });
+              }}
+            />
+          </label>
         </div>
       </div>
     </>
