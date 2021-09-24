@@ -15,7 +15,7 @@ function GiveItemsFormStep2({ setBags, bags }) {
           value={bags}
           onChange={(e) => setBags(e.target.value)}
         >
-          <option value="" className="select-option" disabled selected hidden>
+          <option value="" className="select-option" disabled hidden>
             ── wybierz ──
           </option>
 

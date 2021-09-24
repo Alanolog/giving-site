@@ -12,6 +12,7 @@ function GiveItemsForm({ user }) {
   const [localization, setLocalization] = useState("");
   const [helpGroups, setHelpGroups] = useState([]);
   const [localizationSpecific, setLocalizationSpecific] = useState("");
+  const [deliveryInfo, setDeliveryInfo] = useState({});
 
   return (
     <>
@@ -110,7 +111,10 @@ function GiveItemsForm({ user }) {
           </>
         ) : currStep === 4 ? (
           <>
-            <GiveItemsFormStep4 />
+            <GiveItemsFormStep4
+              deliveryInfo={deliveryInfo}
+              setDeliveryInfo={setDeliveryInfo}
+            />
             <div
               style={{
                 display: "flex",

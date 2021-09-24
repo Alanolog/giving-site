@@ -152,3 +152,31 @@ label.giveItems-form-label-step3-organisation {
     cursor: pointer;
   }
 }
+.giveItems-form-step-content {
+  display: flex;
+  gap: 150px;
+  div {
+    width: 390px;
+
+    h2 {
+      font-size: 1.5rem;
+      line-height: 3rem;
+      font-weight: 600;
+      color: $color-black;
+    }
+    label {
+      display: flex;
+      justify-content: space-between;
+      gap: normal;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 300;
+
+      input[type="text"] {
+        width: 250px;
+        background-color: transparent;
+        border: 1px solid $color-font;
+      }
+    }
+  }
+}
