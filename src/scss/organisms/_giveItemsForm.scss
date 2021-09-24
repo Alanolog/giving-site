@@ -194,4 +194,37 @@ label.giveItems-form-label-step3-organisation {
       }
     }
   }
+  .giveItems-form-summary-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    p {
+      width: 100%;
+      text-align: left;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.giveItems-form-summary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  h5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: $color-black;
+  }
+  p {
+    height: 50px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    img {
+      height: 50px;
+      margin-right: 20px;
+    }
+  }
 }
