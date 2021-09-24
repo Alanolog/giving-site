@@ -9,7 +9,11 @@ function GiveItemsFormButton({ currStep, setCurrStep, direction }) {
           : setCurrStep(--currStep);
       }}
     >
-      {direction === "forward" ? "Dalej" : "Wstecz"}
+      {direction === "forward"
+        ? "Dalej"
+        : direction === "accept"
+        ? "Potwierdzam"
+        : "Wstecz"}
     </button>
   );
 }

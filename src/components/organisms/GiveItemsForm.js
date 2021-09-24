@@ -5,6 +5,7 @@ import GiveItemsFormButton from "../atoms/GiveItemsFormButton";
 import GiveItemsFormStep2 from "../molecules/GiveItemsFormStep2";
 import GiveItemsFormStep3 from "../molecules/GiveItemsFormStep3";
 import GiveItemsFormStep4 from "../molecules/GiveItemsFormStep4";
+import GiveItemsFormSummary from "../molecules/GiveItemsFormSummary";
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
   const [itemType, setItemType] = useState("");
@@ -12,7 +13,15 @@ function GiveItemsForm({ user }) {
   const [localization, setLocalization] = useState("");
   const [helpGroups, setHelpGroups] = useState([]);
   const [localizationSpecific, setLocalizationSpecific] = useState("");
-  const [deliveryInfo, setDeliveryInfo] = useState({});
+  const [deliveryInfo, setDeliveryInfo] = useState({
+    street: "",
+    city: "",
+    postCode: "",
+    phone: "",
+    note: "",
+    time: "",
+    date: "",
+  });
 
   return (
     <>
@@ -132,6 +141,36 @@ function GiveItemsForm({ user }) {
                 currStep={currStep}
                 setCurrStep={setCurrStep}
                 direction="forward"
+              />
+            </div>
+          </>
+        ) : currStep === 5 ? (
+          <>
+            <GiveItemsFormSummary
+              deliveryInfo={deliveryInfo}
+              localization={localization}
+              helpGroups={helpGroups}
+              localizationSpecific={localizationSpecific}
+              bags={bags}
+              itemType={itemType}
+            />
+            <div
+              style={{
+                display: "flex",
+                gap: 50,
+                position: "absolute",
+                bottom: 50,
+              }}
+            >
+              <GiveItemsFormButton
+                currStep={currStep}
+                setCurrStep={setCurrStep}
+                direction="backward"
+              />
+              <GiveItemsFormButton
+                currStep={currStep}
+                setCurrStep={setCurrStep}
+                direction="accept"
               />
             </div>
           </>
