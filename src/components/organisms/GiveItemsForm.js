@@ -9,6 +9,7 @@ import GiveItemsFormSummary from "../molecules/GiveItemsFormSummary";
 import validateItemType from "../atoms/validateGiveItemsForm/validateItemType";
 import validateBags from "../atoms/validateGiveItemsForm/validateBags";
 import validateStep3 from "../atoms/validateGiveItemsForm/validateStep3";
+import validateStep4 from "../atoms/validateGiveItemsForm/validateStep4";
 
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
@@ -155,6 +156,8 @@ function GiveItemsForm({ user }) {
                 currStep={currStep}
                 setCurrStep={setCurrStep}
                 direction="forward"
+                validationFunc={validateStep4}
+                validationArgument={deliveryInfo}
               />
             </div>
           </>
