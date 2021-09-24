@@ -6,6 +6,7 @@ import GiveItemsFormStep2 from "../molecules/GiveItemsFormStep2";
 import GiveItemsFormStep3 from "../molecules/GiveItemsFormStep3";
 import GiveItemsFormStep4 from "../molecules/GiveItemsFormStep4";
 import GiveItemsFormSummary from "../molecules/GiveItemsFormSummary";
+import GiveItemsFormEndScreen from "../molecules/GiveItemsFormEndScreen";
 import validateItemType from "../atoms/validateGiveItemsForm/validateItemType";
 import validateBags from "../atoms/validateGiveItemsForm/validateBags";
 import validateStep3 from "../atoms/validateGiveItemsForm/validateStep3";
@@ -27,6 +28,15 @@ function GiveItemsForm({ user }) {
     time: "",
     date: "",
   });
+
+  const userData = {
+    itemType: itemType,
+    bags: bags,
+    localization: localization,
+    helpGroups: helpGroups,
+    localizationSpecific: localizationSpecific,
+    deliveryInfo: deliveryInfo,
+  };
 
   return (
     <>
@@ -191,6 +201,8 @@ function GiveItemsForm({ user }) {
               />
             </div>
           </>
+        ) : currStep === 6 ? (
+          <GiveItemsFormEndScreen />
         ) : null}
       </form>
     </>
