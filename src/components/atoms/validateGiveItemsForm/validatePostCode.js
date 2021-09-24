@@ -1,8 +1,8 @@
-function validateCity(deliveryInfo) {
+function validatePostCode(deliveryInfo) {
   if (deliveryInfo.postCode.match(/^dd-ddd$/)) {
     return false;
   } else {
     return true;
   }
 }
-export default validateCity;
+export default validatePostCode;
