@@ -1,4 +1,5 @@
 import React from "react";
+import validateDate from "../atoms/validateGiveItemsForm/validateDate";
 function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
   return (
     <>
@@ -56,7 +57,9 @@ function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
             Data
             <input
               type="date"
+              id="datefield"
               value={deliveryInfo.date}
+              min={validateDate()}
               onChange={(e) => {
                 setDeliveryInfo({ ...deliveryInfo, date: e.target.value });
               }}
@@ -67,7 +70,6 @@ function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
             <input
               type="time"
               value={deliveryInfo.time}
-              timezone=""
               onChange={(e) => {
                 setDeliveryInfo({ ...deliveryInfo, time: e.target.value });
               }}
