@@ -14,8 +14,8 @@ function validateStep4(deliveryInfo) {
     return false;
   }
   if (!validatePostCode(deliveryInfo)) {
-    // alert("wpisz prawidłowy kod pocztowy!");
-    // return false;
+    alert("wpisz prawidłowy kod pocztowy!");
+    return false;
   }
   if (!validatePhone(deliveryInfo)) {
     alert("wpisz prawidłowy numer telefonu!");

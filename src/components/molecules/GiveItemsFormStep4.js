@@ -38,6 +38,7 @@ function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
               onChange={(e) => {
                 setDeliveryInfo({ ...deliveryInfo, postCode: e.target.value });
               }}
+              maxLength={6}
             />
           </label>
           <label>

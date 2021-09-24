@@ -8,6 +8,7 @@ import "./components/atoms/firebase";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 function App() {
   const [user, setUser] = useState(false);
+
   return (
     <BrowserRouter>
       <Switch>

@@ -1,6 +1,5 @@
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import validateEmail from "./validateEmail";
-import { Redirect } from "react-router";
 
 function login(email, password, setUser, setIsLogged) {
   if (!validateEmail(email) || password > 6) {
@@ -13,9 +12,6 @@ function login(email, password, setUser, setIsLogged) {
       const user = userCredential.user;
       setUser(user);
       setIsLogged(true);
-      console.log(user);
-      console.log(<Redirect to="/" />);
-      return <Redirect to="/" />;
     })
     .catch((error) => {
       if (error.code === "auth/user-not-found") {

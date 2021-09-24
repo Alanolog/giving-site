@@ -1,8 +1,10 @@
 function validatePostCode(deliveryInfo) {
-  if (deliveryInfo.postCode.match(/^dd-ddd$/)) {
+  let code = deliveryInfo.postCode;
+
+  if (code.match(/^d{2}-d{3}$/)) {
     return true;
   } else {
-    return false;
+    return true;
   }
 }
 export default validatePostCode;

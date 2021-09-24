@@ -1,6 +1,5 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import validateEmail from "./validateEmail";
-import { Redirect } from "react-router";
 
 function signUp(email, password, setUser, setIsRegistered) {
   if (!validateEmail(email) || password > 6) {
@@ -10,10 +9,8 @@ function signUp(email, password, setUser, setIsRegistered) {
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
-      console.log(user);
       setUser(user);
       setIsRegistered(true);
-      return <Redirect to="/" />;
     })
     .catch((error) => {
       if (error.code === "auth/email-already-in-use") {
