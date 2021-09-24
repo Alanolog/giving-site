@@ -1,6 +1,8 @@
 import React from "react";
 import validateDate from "../atoms/validateGiveItemsForm/validateDate";
+import validateTime from "../atoms/validateGiveItemsForm/validateTime";
 function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
+  console.log(validateTime(deliveryInfo));
   return (
     <>
       <h5 className="giveItems-form-step">Krok 4/4</h5>
