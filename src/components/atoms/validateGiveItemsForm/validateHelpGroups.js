@@ -1,8 +1,8 @@
-function validateItemType(itemType) {
-  if (itemType === []) {
+function validateHelpGroups(helpGroups) {
+  if (helpGroups === []) {
     return false;
   } else {
     return true;
   }
 }
-export default validateItemType;
+export default validateHelpGroups;
