@@ -48,7 +48,6 @@ function GiveItemsFormStep3({
             value=""
             className="select-localization-option"
             disabled
-            selected
             hidden
           >
             ── wybierz ──

@@ -157,7 +157,9 @@ label.giveItems-form-label-step3-organisation {
   gap: 150px;
   div {
     width: 390px;
-
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     h2 {
       font-size: 1.5rem;
       line-height: 3rem;
@@ -172,10 +174,17 @@ label.giveItems-form-label-step3-organisation {
       line-height: 2rem;
       font-weight: 300;
 
-      input[type="text"] {
+      input[type="text"],
+      input[type="number"] {
         width: 250px;
         background-color: transparent;
         border: 1px solid $color-font;
+      }
+      input[type="number"] {
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          appearance: none;
+        }
       }
     }
   }

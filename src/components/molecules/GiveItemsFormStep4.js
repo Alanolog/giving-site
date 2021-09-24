@@ -19,6 +19,36 @@ function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
               }}
             />
           </label>
+          <label>
+            Miasto
+            <input
+              type="text"
+              value={deliveryInfo.city}
+              onChange={(e) => {
+                setDeliveryInfo({ ...deliveryInfo, city: e.target.value });
+              }}
+            />
+          </label>
+          <label>
+            Kod Pocztowy
+            <input
+              type="number"
+              value={deliveryInfo.postCode}
+              onChange={(e) => {
+                setDeliveryInfo({ ...deliveryInfo, postCode: e.target.value });
+              }}
+            />
+          </label>
+          <label>
+            Numer telefonu
+            <input
+              type="text"
+              value={deliveryInfo.phone}
+              onChange={(e) => {
+                setDeliveryInfo({ ...deliveryInfo, phone: e.target.value });
+              }}
+            />
+          </label>
         </div>
         <div className="giveItems-form-step-content-right">
           <h2>Termin odbioru:</h2>
