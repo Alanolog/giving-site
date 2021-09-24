@@ -1,8 +1,8 @@
 function validateItemType(itemType) {
   if (itemType === "") {
+    alert("zaznacz co chcesz oddać!");
     return false;
-  } else {
-    return true;
   }
+  return true;
 }
 export default validateItemType;

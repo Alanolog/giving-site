@@ -6,6 +6,10 @@ import GiveItemsFormStep2 from "../molecules/GiveItemsFormStep2";
 import GiveItemsFormStep3 from "../molecules/GiveItemsFormStep3";
 import GiveItemsFormStep4 from "../molecules/GiveItemsFormStep4";
 import GiveItemsFormSummary from "../molecules/GiveItemsFormSummary";
+import validateItemType from "../atoms/validateGiveItemsForm/validateItemType";
+import validateBags from "../atoms/validateGiveItemsForm/validateBags";
+import validateStep3 from "../atoms/validateGiveItemsForm/validateStep3";
+
 function GiveItemsForm({ user }) {
   const [currStep, setCurrStep] = useState(1);
   const [itemType, setItemType] = useState("");
@@ -62,6 +66,8 @@ function GiveItemsForm({ user }) {
                 currStep={currStep}
                 setCurrStep={setCurrStep}
                 direction="forward"
+                validationFunc={validateItemType}
+                validationArgument={itemType}
               />
             </div>
           </>
@@ -85,6 +91,8 @@ function GiveItemsForm({ user }) {
                 currStep={currStep}
                 setCurrStep={setCurrStep}
                 direction="forward"
+                validationFunc={validateBags}
+                validationArgument={bags}
               />
             </div>
           </>
@@ -115,6 +123,12 @@ function GiveItemsForm({ user }) {
                 currStep={currStep}
                 setCurrStep={setCurrStep}
                 direction="forward"
+                validationFunc={validateStep3}
+                validationArgument={{
+                  helpGroups: helpGroups,
+                  localization: localization,
+                  localizationSpecific: localizationSpecific,
+                }}
               />
             </div>
           </>

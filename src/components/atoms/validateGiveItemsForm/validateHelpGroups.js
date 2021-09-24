@@ -1,5 +1,5 @@
 function validateHelpGroups(helpGroups) {
-  if (helpGroups === []) {
+  if (helpGroups.length === 0) {
     return false;
   } else {
     return true;
