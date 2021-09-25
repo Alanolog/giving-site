@@ -33,7 +33,7 @@ function GiveItemsFormStep4({ deliveryInfo, setDeliveryInfo }) {
           <label>
             Kod Pocztowy
             <input
-              type="number"
+              type="text"
               value={deliveryInfo.postCode}
               onChange={(e) => {
                 setDeliveryInfo({ ...deliveryInfo, postCode: e.target.value });

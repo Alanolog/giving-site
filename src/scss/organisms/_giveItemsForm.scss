@@ -66,14 +66,17 @@
       padding-left: 20px;
       appearance: none;
       cursor: pointer;
-      .select-option:not(:checked) {
-        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
+      position: relative;
+      ul {
+        position: absolute;
+        top: 55px;
+        width: 200px;
       }
-
-      .select-option:checked,
-      .select-option:active {
-        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
-        display: none;
+      .select-option:not(:checked) {
+        background-color: transparent;
+        height: 50px;
+        width: 200px;
+        border: 1px solid $color-font;
       }
     }
     .select-localization {

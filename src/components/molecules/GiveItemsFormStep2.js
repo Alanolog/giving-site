@@ -9,7 +9,25 @@ function GiveItemsFormStep2({ setBags, bags }) {
       </h2>
       <label className="giveItems-form-label-step2">
         liczba 60l worków:
-        <select
+        <div className="select">
+          <ul>
+            {options.map((value, index) => {
+              return (
+                <li
+                  className="select-option"
+                  value={value}
+                  key={index}
+                  onClick={(e) => {
+                    setBags(e.target.value);
+                  }}
+                >
+                  {value}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        {/* <select
           className="select"
           name="bags"
           value={bags}
@@ -26,7 +44,7 @@ function GiveItemsFormStep2({ setBags, bags }) {
               </option>
             );
           })}
-        </select>
+        </select> */}
       </label>
     </>
   );
