@@ -57,6 +57,7 @@ function GiveItemsFormStep3({
                   value={value}
                   key={index}
                   onClick={(e) => {
+                    console.log(e.target.value, e.target);
                     setLocalization(e.target.value);
                     if (e.target.parentElement.style.display !== "none") {
                       e.target.parentElement.style.display = "none";
