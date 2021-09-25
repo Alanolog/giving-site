@@ -1,4 +1,7 @@
 import React from "react";
+import arrowDown from "../../assets/Icon-Arrow-Down.svg";
+import arrowUp from "../../assets/Icon-Arrow-Up.svg";
+
 function GiveItemsFormStep2({ setBags, bags }) {
   const options = [1, 2, 3, 4, 5];
   return (
@@ -9,7 +12,15 @@ function GiveItemsFormStep2({ setBags, bags }) {
       </h2>
       <label className="giveItems-form-label-step2">
         liczba 60l worków:
-        <div className="select">
+        <div
+          className="select"
+          onClick={(e) => {
+            if (e.target.querySelector("ul")) {
+              e.target.querySelector("ul").style.display = "flex";
+              e.target.style.backgroundImage = `url(${arrowUp})`;
+            }
+          }}
+        >
           <ul>
             {options.map((value, index) => {
               return (
@@ -19,6 +30,10 @@ function GiveItemsFormStep2({ setBags, bags }) {
                   key={index}
                   onClick={(e) => {
                     setBags(e.target.value);
+                    if (e.target.parentElement.style.display !== "none") {
+                      e.target.parentElement.style.display = "none";
+                      e.target.parentElement.parentElement.style.backgroundImage = `url(${arrowDown})`;
+                    }
                   }}
                 >
                   {value}
@@ -26,25 +41,8 @@ function GiveItemsFormStep2({ setBags, bags }) {
               );
             })}
           </ul>
+          {bags === "" ? "── wybierz ──" : bags}
         </div>
-        {/* <select
-          className="select"
-          name="bags"
-          value={bags}
-          onChange={(e) => setBags(e.target.value)}
-        >
-          <option value="" className="select-option" disabled hidden>
-            ── wybierz ──
-          </option>
-
-          {options.map((value, index) => {
-            return (
-              <option className="select-option" value={value} key={index}>
-                {value}
-              </option>
-            );
-          })}
-        </select> */}
       </label>
     </>
   );
