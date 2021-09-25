@@ -1,4 +1,6 @@
 import React from "react";
+import arrowDown from "../../assets/Icon-Arrow-Down.svg";
+import arrowUp from "../../assets/Icon-Arrow-Up.svg";
 
 const options = ["Poznań", "Warszawa", "Kraków", "Wrocław", "Katowice"];
 
@@ -38,7 +40,38 @@ function GiveItemsFormStep3({
       <h5 className="giveItems-form-step">Krok 3/4</h5>
       <h2 className="giveItems-form-stepTitle">Lokalizacja:</h2>
       <label className="giveItems-form-label-step3">
-        <select
+        <div
+          className="select-localization"
+          onClick={(e) => {
+            if (e.target.querySelector("ul")) {
+              e.target.querySelector("ul").style.display = "flex";
+              e.target.style.backgroundImage = `url(${arrowUp})`;
+            }
+          }}
+        >
+          <ul>
+            {options.map((value, index) => {
+              return (
+                <li
+                  className="select-localization-option"
+                  value={value}
+                  key={index}
+                  onClick={(e) => {
+                    setLocalization(e.target.value);
+                    if (e.target.parentElement.style.display !== "none") {
+                      e.target.parentElement.style.display = "none";
+                      e.target.parentElement.parentElement.style.backgroundImage = `url(${arrowDown})`;
+                    }
+                  }}
+                >
+                  {value}
+                </li>
+              );
+            })}
+          </ul>
+          {localization === "" ? "── wybierz ──" : localization}
+        </div>
+        {/* <select
           className="select-localization"
           name="bags"
           value={localization}
@@ -64,7 +97,7 @@ function GiveItemsFormStep3({
               </option>
             );
           })}
-        </select>
+        </select> */}
       </label>
       <div className="giveItems-form-label-step3-small">
         <p>Komu chcesz pomóc?</p>

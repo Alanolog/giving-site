@@ -70,10 +70,11 @@
       position: relative;
       ul {
         position: absolute;
+        order: 9999;
         top: 55px;
         right: 0;
         width: 100%;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: flex-end;
         justify-content: flex-end;
@@ -105,19 +106,38 @@
       background-repeat: no-repeat;
       background-position: right;
       height: 50px;
+      padding: 5px;
       width: 300px;
       padding-left: 20px;
       appearance: none;
       cursor: pointer;
-      margin-bottom: 20px;
-      .select-localization-option:not(:checked) {
-        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
-      }
-
-      .select-localization-option:checked,
-      .select-localization-option:active {
-        background-color: rgba($color: $color-font-darker, $alpha: 0.1);
+      position: relative;
+      ul {
+        position: absolute;
+        top: 55px;
+        right: 0;
+        width: 100%;
         display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+      .select-localization-option {
+        display: block;
+        background-color: #e8e9e4;
+        width: 300px;
+        border-left: 1px solid $color-font;
+        border-right: 1px solid $color-font;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        &:first-of-type {
+          border-top: 1px solid $color-font;
+        }
+        &:last-of-type {
+          border-bottom: 1px solid $color-font;
+        }
       }
     }
   }
