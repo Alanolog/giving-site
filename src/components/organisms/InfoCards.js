@@ -1,11 +1,11 @@
 import React from "react";
 import ThreeColumns from "../molecules/ThreeColumns";
 import FourSteps from "./FourSteps";
-function InfoCards() {
+function InfoCards(user) {
   return (
     <>
       <ThreeColumns />
-      <FourSteps />
+      <FourSteps user={user} />
     </>
   );
 }

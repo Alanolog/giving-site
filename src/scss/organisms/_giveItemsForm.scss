@@ -9,8 +9,8 @@
   width: 100%;
   height: 880px;
   padding-left: 140px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   gap: 40px;
   button {
     margin-top: 100px;
@@ -150,10 +150,9 @@
 }
 .giveItems-form-stepTitle {
   font-size: 2rem;
-  line-height: 2.875rem;
   font-weight: 600;
   color: $color-black;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 div.giveItems-form-label-step3-small {
   position: relative;
@@ -238,12 +237,15 @@ label.giveItems-form-label-step3-organisation {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
     p {
       width: 100%;
       text-align: left;
       font-size: 1.5rem;
       line-height: 2rem;
       font-weight: 300;
+      max-width: 200px;
+      overflow-x: auto;
     }
   }
 }
@@ -253,15 +255,13 @@ label.giveItems-form-label-step3-organisation {
   flex-direction: column;
   gap: 20px;
   h5 {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.375rem;
     font-weight: 600;
     color: $color-black;
   }
   p {
     height: 50px;
     font-size: 1.5rem;
-    line-height: 2rem;
     img {
       height: 50px;
       margin-right: 20px;

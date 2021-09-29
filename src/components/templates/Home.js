@@ -8,7 +8,7 @@ function Home({ user, setUser }) {
   return (
     <>
       <Hero user={user} setUser={setUser} />
-      <InfoCards />
+      <InfoCards user={user} />
       <AboutUs />
       <HelpInfo />
       <FormBox />
